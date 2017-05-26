@@ -1,0 +1,440 @@
+<h1>Welcome</h1>
+<br>
+<br>
+<div>
+    
+  <button class="button button-stable button-clear" (click)="left4dead2()">
+  <img src="https://i.ytimg.com/vi/PewcieMXHSc/maxresdefault.jpg" alt="left4dead" class="img-thumbnail" width="1000" height="500">
+  </button>
+  
+   <div class = "caption">
+         <h3>Left 4 Dead 2</h3>
+         
+         
+         <p>
+           <a (click)="getPlatformforleft()" class = "btn btn-primary" role = "button">
+                Platforms
+            </a>
+            <a (click)="getCharactersforleft()" class = "btn btn-primary" role = "button">
+               Characters
+            </a> 
+            <a (click)="getUserforleft()" class = "btn btn-primary" role = "button">
+               UserCount
+            </a>
+            
+            <span *ngIf="auth.authenticated()">
+            <a (click)="getPCUserforleft()" class = "btn btn-primary" role = "button">
+               User for PC
+            </a> 
+            <a (click)="getXboxUserforleft()" class = "btn btn-primary" role = "button">
+               User for XBox
+            </a> 
+            </span>
+         </p>
+         
+         <div *ngIf="auth.authenticated()">
+         <p>Please Enter Details to Add yourself in Left 4 Dead 2</p>
+        <form #v="ngForm"  (ngSubmit)="AddmeinLeft(v.value)" (ngSubmit)="Addmeuserleft(v.value)">
+           <div>  
+                <label for="name">Name :*</label>  
+                <input class="required" type="text" id="name"  placeholder="Please Print name in UpperCase"  name="name" ngModel>  
+          </div>
+          <div>  
+                <label for="platform">
+		      	<span class="required">Platform: *</span>
+		      	<select type="text" id="platform" name="platform" value="" required="required" ngModel>
+                    <option value="" selected disabled> Please Select Platform</option>
+                    <option value="PC">PC</option>
+                    <option value="XBox">XBox</option>
+            </select>
+            </label>
+          </div>
+          <button class = "btn btn-primary" role = "button">Add Yourself</button>  
+        </form>
+        </div>
+    
+      </div>
+</div>
+
+    <div>
+       <p> {{aboutleft}} </p>
+    </div>
+
+    <div>
+       <ul>
+        <li *ngFor="let pt of platformleft">
+            {{ pt }}
+          </li>
+         </ul>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let ch of characterleft">
+            {{ ch }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of usercountleft | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+  
+    <div >
+       <ul>
+        <li *ngFor="let ch of userpcleft | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of userxboxleft | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+  
+
+<div>
+ <button class="button button-stable button-clear" (click)="destiny()">
+  <img src="http://compass.xbox.com/assets/84/c7/84c70d66-02ce-42dd-a225-e70a31c0ff02.jpg?n=Destiny-Taken-King-2016_hero-desktop_1920x720_Complete-collection.jpg" class="img-thumbnail" width="1000" height="500">
+   </button>
+   <div class = "caption">
+         <h3>Destiny</h3>
+         
+         <p>
+           <a (click)="getPlatformforDestiny()" class = "btn btn-primary" role = "button">
+                Platforms
+            </a>
+            <a (click)="getCharactersforDestiny()" class = "btn btn-primary" role = "button">
+               Characters
+            </a> 
+            <a (click)="getUserforDestiny()" class = "btn btn-primary" role = "button">
+               UserCount
+            </a> 
+            
+            <span *ngIf="auth.authenticated()">
+            <a (click)="getPS3UserforDestiny()" class = "btn btn-primary" role = "button">
+               Users for PS3
+            </a> 
+            <a (click)="getPS4UserforDestiny()" class = "btn btn-primary" role = "button">
+               Users for PS4
+            </a> 
+            <a (click)="getXBoxUserforDestiny()" class = "btn btn-primary" role = "button">
+               Users for XBox
+            </a> 
+            <a (click)="getXB1UserforDestiny()" class = "btn btn-primary" role = "button">
+               Users for XB1
+            </a> 
+            </span>
+         </p>
+         
+         <div *ngIf="auth.authenticated()">
+          <p>Please Enter Details to Add yourself in Destiny</p>
+          
+         <form #t="ngForm"  (ngSubmit)="AddmeinDestiny(t.value)" (ngSubmit)="AddmeuserDestiny(t.value)" >
+           <div>  
+                <label for="name">Name :*</label>  
+                <input class="required" type="text" id="name"  placeholder="Please Print name in UpperCase"  name="name" ngModel>  
+          </div>
+          <div>  
+                <label for="platform">
+		      	<span class="required">Platform: *</span>
+		      	<select type="text" id="platform" name="platform" value="" required="required" ngModel>
+                    <option value="" selected disabled> Please Select Platform</option>
+                    <option value="PS3">PS3</option>
+                    <option value="XBox">XBox</option>
+                    <option value="PS4">PS4</option>
+                    <option value="XB1">XB1</option>
+            </select>
+            </label>
+          </div>
+          <button class = "btn btn-primary" role = "button">Add Yourself</button>  
+        </form> 
+        </div>
+        
+      </div>
+</div>
+
+    <div>
+        <p>{{aboutdestiny}}</p>
+    </div>
+
+    <div>
+       <ul>
+        <li *ngFor="let pt of platformdestiny">
+            {{ pt }}
+          </li>
+         </ul>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let ch of characterdestiny">
+            {{ ch }}
+          </li>
+         </ul>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let ch of usercountdestiny | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of userxboxdestiny | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of userps3destiny| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+     <div >
+       <ul>
+        <li *ngFor="let ch of userps4destiny| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+     <div >
+       <ul>
+        <li *ngFor="let ch of userxb1destiny| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+      
+      
+
+
+<div>
+  <button class="button button-stable button-clear" (click)="dibalo()">
+  <img src="https://blzmedia-a.akamaihd.net/d3/media/wallpapers/wallpaper033/wallpaper033-1920x1080.jpg" class="img-thumbnail" width="1000" height="500">
+  </button>
+  
+   <div class = "caption">
+         <h3>Diablo 3</h3>
+         
+         
+         <p>
+            <a (click)="getPlatformforDiablo()" class = "btn btn-primary" role = "button">
+                Platforms
+            </a>
+            <a (click)="getCharactersforDiablo()" class = "btn btn-primary" role = "button">
+               Characters
+            </a> 
+            <a (click)="getUserforDiabalo()" class = "btn btn-primary" role = "button">
+               UserCount
+            </a>
+            
+            <span *ngIf="auth.authenticated()">
+            <a (click)="getPS3UserforDiablo()" class = "btn btn-primary" role = "button">
+               Users for PS3
+            </a> 
+            <a (click)="getPS4UserforDiablo()" class = "btn btn-primary" role = "button">
+               Users for PS4
+            </a> 
+            <a (click)="getXBoxUserforDiablo()" class = "btn btn-primary" role = "button">
+               Users for XBox
+            </a> 
+            <a (click)="getXB1UserforDiablo()" class = "btn btn-primary" role = "button">
+               Users for XB1
+            </a> 
+            </span>
+         </p>
+         
+        <div *ngIf="auth.authenticated()">
+         <p>Please Enter Details to Add yourself in Diablo 3</p>
+         <form #m="ngForm"  (ngSubmit)="AddmeinDiablo(m.value)" (ngSubmit)="AddmeuserDiablo(m.value)" >
+           <div>  
+                <label for="name">Name :*</label>  
+                <input class="required" type="text" id="name"  placeholder="Please Print name in UpperCase"  name="name" ngModel>  
+          </div>
+          <div>  
+                <label for="platform">
+		      	<span class="required">Platform: *</span>
+		      	<select type="text" id="platform" name="platform" value="" required="required" ngModel>
+                    <option value="" selected disabled> Please Select Platform</option>
+                    <option value="PS3">PS3</option>
+                    <option value="XBox">XBox</option>
+                    <option value="PS4">PS4</option>
+                    <option value="XB1">XB1</option>
+            </select>
+            </label>
+          </div>
+          <button class = "btn btn-primary" role = "button">Add Yourself</button>  
+        </form> 
+        </div>
+         
+      </div>
+</div>
+
+
+    <div>
+        <p>{{aboutdiablo}}</p>
+    </div>
+
+    <div>
+       <ul>
+        <li *ngFor="let pt of platformdiablo">
+            {{ pt }}
+          </li>
+         </ul>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let ch of characterdiablo">
+            {{ ch }}
+          </li>
+         </ul>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let ch of usercountdiablo | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of userxboxdiablo | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of userps3diablo| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+     <div >
+       <ul>
+        <li *ngFor="let ch of userps4diablo| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+     <div >
+       <ul>
+        <li *ngFor="let ch of userxb1diablo| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+
+
+
+
+<div>
+  <button class="button button-stable button-clear" (click)="war()">
+  <img  src="https://blogs-images.forbes.com/insertcoin/files/2014/08/world-of-warcraft.jpg" class="img-thumbnail" width="1000" height="500">
+   </button>
+   
+   <div class = "caption">
+         <h3> World of Warcraft</h3>
+        
+         <p>
+             <a (click)="getPlatformforWar()" class = "btn btn-primary" role = "button">
+                Platforms
+            </a>
+            <a (click)="getCharactersforWar()" class = "btn btn-primary" role = "button">
+               Characters
+            </a> 
+            <a (click)="getUserforWar()" class = "btn btn-primary" role = "button">
+               UserCount
+            </a> 
+            <span *ngIf="auth.authenticated()">
+            <a (click)="getPCUserforWar()" class = "btn btn-primary" role = "button">
+               Users for PC
+            </a> 
+            </span>
+         </p>
+         
+        <div *ngIf="auth.authenticated()">
+         <p>Please Enter Details to Add yourself in World of Warcraft</p>
+         <form #f="ngForm"  (ngSubmit)="AddmeinWar(f.value)" >
+           <div>  
+                <label for="name">Name :*</label>  
+                <input class="required" type="text" id="name"  placeholder="Please Print name in UpperCase"  name="name" ngModel>  
+          </div>
+          <div>  
+                <label for="platform">
+		      	<span class="required">Platform: *</span>
+		      	<select type="text" id="platform" name="platform" value="" required="required" ngModel>
+                    <option value="" selected disabled> Please Select Platform</option>
+                    <option value="PC">PC</option>
+            </select>
+            </label>
+          </div>
+          <button class = "btn btn-primary" role = "button">Add Yourself</button>  
+        </form> 
+        </div>
+         
+      </div>
+</div>
+
+    <div>
+        <p>{{aboutwar}}</p>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let pt of platformwar">
+            {{ pt }}
+          </li>
+         </ul>
+    </div>
+    
+    <div>
+       <ul>
+        <li *ngFor="let ch of characterwar">
+            {{ ch }}
+          </li>
+         </ul>
+    </div>
+      
+    <div>
+       <ul>
+        <li *ngFor="let ch of usercountforWar | gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+    
+    <div >
+       <ul>
+        <li *ngFor="let ch of userpcwar| gaming">
+            {{ ch.key }}
+          </li>
+         </ul>
+    </div>
+
+
+
+

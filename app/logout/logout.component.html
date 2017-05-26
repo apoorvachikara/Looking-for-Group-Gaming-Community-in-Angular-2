@@ -1,0 +1,7 @@
+<h1>Welcome</h1>
+<div class="alert alert-danger" *ngIf="!auth.authenticated()">You are logged out successfully</div>
+
+    <p *ngIf="!auth.authenticated()" align="middle">ThankYou! for joining my Website. I hope you enjoyed the tour</p>
+    <div *ngIf="!auth.authenticated()">
+        <img src="https://rlv.zcache.com/rustic_burlap_thank_you_please_come_again_stickers-r73e4db3705ae4a6485161964b56f3b1b_v9wth_8byvr_324.jpg" align="center !important" class="img-thumbnail"  style="margin-left: 411px;" width="500" height="500">
+    </div>

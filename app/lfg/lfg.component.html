@@ -1,0 +1,234 @@
+<h1></h1>
+<br>
+<br>
+<br>
+<br>
+    <p align="middle">Hello Guys! This LFG page will help you to post the request to people on this website. You can enjoy it by logging in and creating your profile</p>
+<div class="container">
+	<div class="row">
+<form class="form-horizontal" #f="ngForm" (ngSubmit)="saveRequest(f.value)" (ngSubmit)="saverequestname(f.value)" (ngSubmit)="saveRequestinrequest(f.value)">
+<fieldset>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Player Id">Player Id: *</label>  
+  <div class="col-md-6">
+  <input id="playerid" name="playerid" type="number" placeholder="Please put playerid" class="form-control input-md" required="required" ngModel>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Request name">Request Name: *</label>  
+  <div class="col-md-6">
+  <input id="Name" name="Name" type="text" placeholder="Please put name for your request" class="form-control input-md" required="required" ngModel>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Game">Game</label>
+  <div class="col-md-6">
+    <select id="Game" name="Game" class="form-control" required="required" ngModel>
+            <option value="" selected disabled> Please Select Team Type</option>
+            <option value="Left 4 Dead 2">Left 4 Dead 2</option>
+            <option value="Destiny">Destiny</option>
+            <option value="World of Warcraft">World of Warcraft</option>
+            <option value="Diablo 3">Diablo 3</option>
+    </select>
+    </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="type of team">Type of Team</label>  
+  <div class="col-md-6">
+  <select id="Team" name="Team" class="form-control" required="required" ngModel>
+      <option value="" selected disabled> Please Select Team Type</option>
+            <option value="Any">Any</option>
+            <option value="Casual">Casual</option>
+            <option value="Serious">Serious</option>
+            <option value="Zealous">Zealous</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="match">Please Select Match or Event Type</label>  
+  <div class="col-md-6">
+  <select id="Event" name="Event" class="form-control" required="required" ngModel>
+      <option value="" selected disabled> Please Select Match or Event Type</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Survival horror">Survival horror</option>
+            <option value="Massively multiplayer online">Massively multiplayer online</option>
+            <option value="Action-adventure">Action-adventure</option>
+            <option value="Hardcore mode">Hardcore mode</option>
+            <option value="Parental controls">Parental controls</option>
+            <option value="Ongoing gameplay">Ongoing gameplay</option>
+            <option value="Scavenge">Scavenge</option>
+            <option value="Campaign">Campaign</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+          <label class="col-md-4 control-label" for="Event Time">Please select Event Time from: *</label>  
+            <div class="col-md-6">
+            <select id="Start" name="Start" class="form-control" required="required" ngModel>
+            <option value="" selected disabled>Please Select Playing Time for Event</option>
+            <option value="00:00 - 01:00 AM">00:00 - 01:00 AM</option>
+            <option value="01:00 - 02:00 AM">01:00 - 02:00 AM</option>
+            <option value="02:00 - 03:00 AM">02:00 - 03:00 AM</option>
+            <option value="03:00 - 04:00 AM">03:00 - 04:00 AM</option>
+            <option value="05:00 - 06:00 AM">05:00 - 06:00 AM</option>
+            <option value="06:00 - 07:00 AM">06:00 - 07:00 AM</option>
+            <option value="07:00 - 08:00 AM">07:00 - 08:00 AM</option>
+            <option value="08:00 - 09:00 AM">08:00 - 09:00 AM</option>
+            <option value="09:00 - 10:00 AM">09:00 - 10:00 AM</option>
+            <option value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
+            <option value="11:00 - 12:00 AM">11:00 - 12:00 AM</option>
+            <option value="12:00 - 13:00 PM">12:00 - 13:00 PM</option>
+            <option value="13:00 - 14:00 PM">13:00 - 14:00 PM</option>
+            <option value="14:00 - 15:00 PM">14:00 - 15:00 PM</option>
+            <option value="15:00 - 16:00 PM">15:00 - 16:00 PM</option>
+            <option value="16:00 - 17:00 PM">16:00 - 17:00 PM</option>
+            <option value="17:00 - 18:00 PM">17:00 - 18:00 PM</option>
+            <option value="18:00 - 19:00 PM">18:00 - 19:00 PM</option>
+            <option value="19:00 - 20:00 PM">19:00 - 20:00 PM</option>
+            <option value="20:00 - 21:00 PM">20:00 - 21:00 PM</option>
+            <option value="21:00 - 22:00 PM">21:00 - 22:00 PM</option>
+            <option value="22:00 - 23:00 PM">22:00 - 23:00 PM</option>
+            <option value="23:00 - 00:00 PM">23:00 - 00:00 PM</option>
+		  </select>
+  </div>
+</div>
+
+
+<div class="form-group">
+          <label class="col-md-4 control-label" for="Event Time">Please select Event Time to: *</label>  
+            <div class="col-md-6">
+            <select id="End" name="End" class="form-control" required="required" ngModel>
+            <option value="" selected disabled>Please Select Playing Time for Event</option>
+            <option value="00:00 - 01:00 AM">00:00 - 01:00 AM</option>
+            <option value="01:00 - 02:00 AM">01:00 - 02:00 AM</option>
+            <option value="02:00 - 03:00 AM">02:00 - 03:00 AM</option>
+            <option value="03:00 - 04:00 AM">03:00 - 04:00 AM</option>
+            <option value="05:00 - 06:00 AM">05:00 - 06:00 AM</option>
+            <option value="06:00 - 07:00 AM">06:00 - 07:00 AM</option>
+            <option value="07:00 - 08:00 AM">07:00 - 08:00 AM</option>
+            <option value="08:00 - 09:00 AM">08:00 - 09:00 AM</option>
+            <option value="09:00 - 10:00 AM">09:00 - 10:00 AM</option>
+            <option value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
+            <option value="11:00 - 12:00 AM">11:00 - 12:00 AM</option>
+            <option value="12:00 - 13:00 PM">12:00 - 13:00 PM</option>
+            <option value="13:00 - 14:00 PM">13:00 - 14:00 PM</option>
+            <option value="14:00 - 15:00 PM">14:00 - 15:00 PM</option>
+            <option value="15:00 - 16:00 PM">15:00 - 16:00 PM</option>
+            <option value="16:00 - 17:00 PM">16:00 - 17:00 PM</option>
+            <option value="17:00 - 18:00 PM">17:00 - 18:00 PM</option>
+            <option value="18:00 - 19:00 PM">18:00 - 19:00 PM</option>
+            <option value="19:00 - 20:00 PM">19:00 - 20:00 PM</option>
+            <option value="20:00 - 21:00 PM">20:00 - 21:00 PM</option>
+            <option value="21:00 - 22:00 PM">21:00 - 22:00 PM</option>
+            <option value="22:00 - 23:00 PM">22:00 - 23:00 PM</option>
+            <option value="23:00 - 00:00 PM">23:00 - 00:00 PM</option>
+		  </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="description">Short Description: *</label>  
+  <div class="col-md-6">
+  <input id="Description" name="Description" type="text" placeholder="Please put Description" class="form-control input-md" required="required" ngModel>
+  </div>
+</div>
+  
+<div *ngIf="auth.authenticated()">
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Send Request"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">Send Request</button>
+  </div>
+</div>
+
+
+    <div class="form-group">
+         <label class="col-md-4 control-label" for="View All Request"></label>
+        <form #t="ngForm" (ngSubmit)="allRequest()">
+            <button id="submit" name="submit" class="btn btn-primary">View All Request by Name</button>
+        </form>
+    </div>
+    
+    <div class="form-group">
+         <label class="col-md-4 control-label" for="View any Request by Name"></label>
+        <form #t="ngForm" (ngSubmit)="anyRequest(t.value)">
+            <input type="text" name="gamename" placeholder="Please enter RequestName" ngModel>
+            <button id="submit" name="submit" class="btn btn-primary">View any Request by Name</button>
+        </form>
+    </div>
+    
+    <div class="form-group">
+         <label class="col-md-4 control-label" for="View specific Request"></label>
+        <form #g="ngForm" (ngSubmit)="specificRequest(g.value)">
+            <input type="text" name="gamename" placeholder="Please enter RequestName" ngModel>
+            <input type="text" name="playerid" placeholder="Please enter Playerid" ngModel>
+            <button id="submit" name="submit" class="btn btn-primary">View specific Request by Name and Playerid</button>
+        </form>
+    </div>
+    
+    
+    <div class="form-group">
+         <label class="col-md-4 control-label" for="View specific Request"></label>
+        <form #g="ngForm" (ngSubmit)="deleteRequest(g.value)" (ngSubmit)="deleteRequestfromplayerid(g.value)" (ngSubmit)="deletefromrequestdetails(g.value)">
+            <input type="text" name="gamename" placeholder="Please enter RequestName" ngModel>
+            <input type="text" name="playerid" placeholder="Please enter Playerid" ngModel>
+            <button id="submit" name="submit" class="btn btn-primary">Delete specific Request by playerid</button>
+        </form>
+    </div>
+    </div>
+    
+    
+    
+    <div class="form-group">
+    <div class="col-md-4 control-label">
+        
+            <a *ngFor="let r of response | gaming">
+                {{r.key}} : {{r.value}} <br>
+            </a>
+        
+    </div>
+    </div>
+    
+    
+    <div class="form-group">
+    <div class="col-md-4 control-label">
+            <ul *ngFor="let r of request | gaming">
+                {{r.key}}<br>
+            </ul>
+         
+        </div>
+    </div>
+    
+    <div class="form-group">
+    <div class="col-md-4 control-label">
+        
+            <a *ngFor="let r of viewbyname | gaming">
+                {{r.key}} : {{r.value}} <br>
+            </a>
+        
+    </div>
+    </div>
+    
+    <div class="form-group">
+    <div class="col-md-4 control-label">
+            <ul *ngFor="let r of specificrequest | gaming">
+                {{r.key}} : {{r.value}}<br>
+            </ul>
+        </div>
+    </div>
+    
+        
+</fieldset>
+</form>
+	</div>
+	</div>

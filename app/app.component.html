@@ -1,0 +1,48 @@
+
+<div class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+        
+             <li *ngIf = "profile"><a *ngIf="auth.authenticated()">Welcome ! {{profile.nickname}} </a></li>
+             
+             
+             <li><a routerLink="/about" routerLinkActive="active"> Game </a></li>
+             
+             <li><a routerLink="/profile" routerLinkActive="active" *ngIf="auth.authenticated()">Profile</a></li>
+             <li><a routerLink="/lfg" routerLinkActive="active">Lfg</a></li>
+             
+            <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">Login</a></li>
+            <li><a routerLink="/logout" (click)="auth.logout()" *ngIf="auth.authenticated()">Logout</a></li>
+            
+            <li><img *ngIf="auth.authenticated()" class ="img-circle" style="height: 58px !important" src="{{profile.picture}}" ></li>
+          </ul>
+          
+        <ul class="nav nav-pills pull-left">
+        <li><img class ="img-circle" style="height: 58px !important" src="https://www.pcgamesn.com/sites/default/files/Diablo%203%20patch%202.4.1.jpg" ></li>
+        <h3 class="text-muted" style="margin-top: 2px; margin-bottom: 10.5px;">Gaming Community: Let's Share Power</h3>
+        </ul>
+        </nav>
+       
+        
+      </div>
+      </div>
+      </div>
+     
+    
+      <div class="body clearfix">
+        
+      <div >
+      <router-outlet> </router-outlet>
+      </div>
+      </div>
+
+
+
+
+    
+    
+
+
+
